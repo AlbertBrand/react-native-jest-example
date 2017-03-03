@@ -25,5 +25,10 @@ exports[`App renders correctly 1`] = `
   >
     Welcome fellow traveler!
   </Text>
+  <Icon
+    color="#9ad3f1"
+    name="thumbs-up"
+    size={64}
+  />
 </View>
 `;
