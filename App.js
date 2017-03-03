@@ -5,6 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Text style={styles.welcome}>
         Welcome fellow traveler!
       </Text>
+      <Icon name="thumbs-up" size={64} color="#9ad3f1" />
     </View>
   );
 }
