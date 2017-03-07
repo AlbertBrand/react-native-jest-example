@@ -1,10 +1,10 @@
 /* @flow */
-import React from 'react';
+import React, { default as mockReact } from 'react';
 import renderer from 'react-test-renderer';
 
 import App from '../App';
 
-jest.mock('react-native-vector-icons/FontAwesome', () => 'Icon');
+jest.mock('react-native-vector-icons/FontAwesome', () => (props) => mockReact.createElement('Icon', props, props.children));
 
 describe('App', () => {
   it('renders correctly', () => {
