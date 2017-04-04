@@ -1,16 +1,13 @@
 /* @flow */
-import React, { default as mockReact } from 'react';
+import React from 'react';
 import renderer from 'react-test-renderer';
 
 import App from '../App';
 
 jest.mock('react-native-vector-icons/FontAwesome', () => {
-  class Icon extends mockReact.Component {
-    render() {
-      const { children, ...props } = this.props;
-      return mockReact.createElement('Icon', props, children);
-    }
-  }
+  const React = require('react');
+  const Icon = props => React.createElement('Icon', props, props.children);
+  Icon.Button = 'Icon.Button';
   return Icon;
 });
 

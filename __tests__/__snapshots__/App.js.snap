@@ -30,5 +30,11 @@ exports[`App renders correctly 1`] = `
     name="thumbs-up"
     size={64}
   />
+  <Icon.Button
+    backgroundColor="#3b5998"
+    name="facebook"
+  >
+    Login with Facebook
+  </Icon.Button>
 </View>
 `;
