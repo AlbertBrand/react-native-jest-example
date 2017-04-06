@@ -6,9 +6,12 @@ import App from '../App';
 
 jest.mock('react-native-vector-icons/FontAwesome', () => {
   const mockComponent = require('mockComponent').default;
+  const module = jest.genMockFromModule('react-native-vector-icons/FontAwesome');
   const Icon = mockComponent('Icon');
   Icon.Button = mockComponent('Icon.Button');
-  return Icon;
+  module.default = Icon;
+  module.Button = Icon.Button;
+  return module;
 });
 
 describe('App', () => {

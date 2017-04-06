@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button } from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
   return (
@@ -14,9 +15,9 @@ export default function App() {
         Welcome fellow traveler!
       </Text>
       <Icon name="thumbs-up" size={64} color="#9ad3f1" />
-      <Icon.Button name="facebook" backgroundColor="#3b5998">
+      <Button name="facebook" backgroundColor="#3b5998">
         Login with Facebook
-      </Icon.Button>
+      </Button>
     </View>
   );
 }
